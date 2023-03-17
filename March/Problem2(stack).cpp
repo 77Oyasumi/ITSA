@@ -7,11 +7,13 @@ using namespace std;
 bool checking(string sampleString){
     stack<char> mapping;
     for (auto character:sampleString){
-        if (character == 'X'){mapping.emplace(character);}
+        if (character == 'X'){
+            mapping.emplace(character);
+        }
         if (character == 'Y'){
             if (mapping.empty()) return false;
                 mapping.pop();
-            }
+        }
     }
     return mapping.empty();
     
